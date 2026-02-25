@@ -1,0 +1,23 @@
+.git/
+target/
+fixtures/live.json
+
+# web
+node_modules/
+dist/
+*.tsbuildinfo
+playwright-report/
+test-results/
+.env
+.env.*
+!.env.example
+
+# python
+.venv/
+.cache/
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# esp32
+.pio/
