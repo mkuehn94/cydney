@@ -1,0 +1,535 @@
+[
+  {
+    "id": "roadworks",
+    "layer": "traffic",
+    "title": "Roadworks on Kottbusser Damm",
+    "subtitle": "One lane restricted · allow extra time",
+    "position": [
+      13.4233,
+      52.4938
+    ],
+    "ageMinutes": 4,
+    "severity": "warning",
+    "description": "Example road restriction near your demo location. A real connector would retain the authority’s original wording and validity period.",
+    "facts": [
+      {
+        "label": "Impact",
+        "value": "Lane restriction"
+      },
+      {
+        "label": "Reported",
+        "value": "4 min before demo now"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "Traffic connector",
+        "recordId": "demo:roadworks",
+        "note": "Simulated observation; no live connection."
+      }
+    ]
+  },
+  {
+    "id": "bus-m29",
+    "layer": "transit",
+    "title": "M29 toward Hermannplatz",
+    "subtitle": "Sample departure in 4 min · +2 min delay",
+    "position": [
+      13.424,
+      52.4972
+    ],
+    "ageMinutes": 1,
+    "description": "Simulated bus position and departure. Future GTFS-Realtime adapter can supply trip updates, vehicle positions and service alerts.",
+    "facts": [
+      {
+        "label": "Route",
+        "value": "M29 → Hermannplatz"
+      },
+      {
+        "label": "Departure",
+        "value": "Demo +4 min"
+      },
+      {
+        "label": "Delay",
+        "value": "+2 min"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "Transit connector",
+        "recordId": "demo:bus-m29",
+        "note": "Simulated observation; no live connection."
+      }
+    ]
+  },
+  {
+    "id": "flight-one",
+    "layer": "flights",
+    "title": "Aircraft overhead",
+    "subtitle": "DEMO 241 · A320 · northeast bound",
+    "position": [
+      13.435,
+      52.507
+    ],
+    "ageMinutes": 0,
+    "heading": 42,
+    "description": "Simulated aircraft track. Callsign and telemetry are fictional. No flight-tracking provider is connected.",
+    "facts": [
+      {
+        "label": "Callsign",
+        "value": "DEMO 241"
+      },
+      {
+        "label": "Altitude",
+        "value": "3,200 m · simulated"
+      },
+      {
+        "label": "Speed",
+        "value": "410 km/h · simulated"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "Aircraft connector",
+        "recordId": "demo:flight-one",
+        "note": "Simulated observation; no live connection."
+      }
+    ]
+  },
+  {
+    "id": "flight-two",
+    "layer": "flights",
+    "title": "Aircraft west of you",
+    "subtitle": "DEMO 082 · turboprop · southbound",
+    "position": [
+      13.392,
+      52.501
+    ],
+    "ageMinutes": 3,
+    "heading": 170,
+    "description": "Second sample aircraft, shown to explore the movement layer. Not a real flight.",
+    "facts": [
+      {
+        "label": "Callsign",
+        "value": "DEMO 082"
+      },
+      {
+        "label": "Altitude",
+        "value": "1,800 m · simulated"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "Aircraft connector",
+        "recordId": "demo:flight-two",
+        "note": "Simulated observation; no live connection."
+      }
+    ]
+  },
+  {
+    "id": "u8",
+    "layer": "transit",
+    "title": "U8 · Schönleinstraße",
+    "subtitle": "Next sample train in 6 min",
+    "position": [
+      13.4226,
+      52.4931
+    ],
+    "ageMinutes": 2,
+    "description": "Example station departure card. This is not a current timetable or service report.",
+    "facts": [
+      {
+        "label": "Direction",
+        "value": "Wittenau"
+      },
+      {
+        "label": "Departure",
+        "value": "Demo +6 min"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "Transit connector",
+        "recordId": "demo:u8",
+        "note": "Simulated observation; no live connection."
+      }
+    ]
+  },
+  {
+    "id": "rain",
+    "layer": "alerts",
+    "title": "Rain approaching from the west",
+    "subtitle": "Sample forecast · reaches area in 18 min",
+    "position": [
+      13.404,
+      52.5015
+    ],
+    "ageMinutes": 7,
+    "severity": "warning",
+    "description": "Illustrative weather notice, not an official warning. Future forecasts should keep issue time, uncertainty and their originating weather authority.",
+    "facts": [
+      {
+        "label": "Expected",
+        "value": "Demo +18 min"
+      },
+      {
+        "label": "Intensity",
+        "value": "Light · simulated"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "Weather connector",
+        "recordId": "demo:rain",
+        "note": "Simulated observation; no live connection."
+      }
+    ]
+  },
+  {
+    "id": "camera-canal",
+    "layer": "cameras",
+    "title": "Canal view",
+    "subtitle": "Demo camera · stream not connected",
+    "position": [
+      13.4152,
+      52.4967
+    ],
+    "ageMinutes": 90,
+    "description": "Placeholder for an intentionally public, authorized camera. No camera imagery is fetched, no stream is connected, and no camera at this location is asserted to exist.",
+    "facts": [
+      {
+        "label": "Video",
+        "value": "Not connected"
+      },
+      {
+        "label": "Access policy",
+        "value": "Authorized public feeds only"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "Camera connector",
+        "recordId": "demo:camera-canal",
+        "note": "Simulated observation; no live connection."
+      }
+    ]
+  },
+  {
+    "id": "camera-square",
+    "layer": "cameras",
+    "title": "Square view",
+    "subtitle": "Demo camera · stream not connected",
+    "position": [
+      13.418,
+      52.5021
+    ],
+    "ageMinutes": 90,
+    "description": "Illustrative camera marker only. A real integration must verify publication, embed rights and any restreaming permission.",
+    "facts": [
+      {
+        "label": "Video",
+        "value": "Not connected"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "Camera connector",
+        "recordId": "demo:camera-square",
+        "note": "Simulated observation; no live connection."
+      }
+    ]
+  },
+  {
+    "id": "air",
+    "layer": "environment",
+    "title": "Neighborhood air quality",
+    "subtitle": "Sample PM2.5 · 8 µg/m³",
+    "position": [
+      13.4085,
+      52.4915
+    ],
+    "ageMinutes": 12,
+    "description": "Simulated sensor observation. Not a real measurement or health recommendation.",
+    "facts": [
+      {
+        "label": "PM2.5",
+        "value": "8 µg/m³ · simulated"
+      },
+      {
+        "label": "Observation age",
+        "value": "12 min at demo now"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "Environment connector",
+        "recordId": "demo:air",
+        "note": "Simulated observation; no live connection."
+      }
+    ]
+  },
+  {
+    "id": "water",
+    "layer": "environment",
+    "title": "Canal level",
+    "subtitle": "Sample reading · steady trend",
+    "position": [
+      13.432,
+      52.4945
+    ],
+    "ageMinutes": 18,
+    "description": "Example water-level observation. This marker does not represent a verified gauge location.",
+    "facts": [
+      {
+        "label": "Trend",
+        "value": "Steady · simulated"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "Environment connector",
+        "recordId": "demo:water",
+        "note": "Simulated observation; no live connection."
+      }
+    ]
+  },
+  {
+    "id": "cycle",
+    "layer": "traffic",
+    "title": "Cycle route maintenance",
+    "subtitle": "Sample notice · short detour",
+    "position": [
+      13.405,
+      52.4942
+    ],
+    "ageMinutes": 23,
+    "description": "Fictional maintenance notice to demonstrate replay and layer filtering.",
+    "facts": [
+      {
+        "label": "Impact",
+        "value": "Cycle path detour"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "Traffic connector",
+        "recordId": "demo:cycle",
+        "note": "Simulated observation; no live connection."
+      }
+    ]
+  },
+  {
+    "id": "place-market",
+    "layer": "places",
+    "title": "Kiez Market",
+    "subtitle": "Groceries · demonstration place",
+    "category": "Groceries",
+    "position": [
+      13.4162,
+      52.4995
+    ],
+    "ageMinutes": 90,
+    "description": "Fictional place for interface testing, not a business listing. Duplicate fixtures are linked through an explicit demo mapping; production matching is not implemented yet.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Groceries"
+      },
+      {
+        "label": "Opening hours",
+        "value": "Unknown · not imported"
+      },
+      {
+        "label": "Data mode",
+        "value": "Demonstration only"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "OpenStreetMap",
+        "recordId": "OpenStreetMap:node/demo-market",
+        "note": "Fictional fixture, not an imported source record."
+      },
+      {
+        "provider": "AllThePlaces",
+        "recordId": "AllThePlaces:demo-market",
+        "note": "Fictional fixture, not an imported source record."
+      }
+    ]
+  },
+  {
+    "id": "place-coffee",
+    "layer": "places",
+    "title": "Canal Coffee",
+    "subtitle": "Café · demonstration place",
+    "category": "Café",
+    "position": [
+      13.4215,
+      52.4958
+    ],
+    "ageMinutes": 90,
+    "description": "Fictional place for interface testing, not a business listing. Duplicate fixtures are linked through an explicit demo mapping; production matching is not implemented yet.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Café"
+      },
+      {
+        "label": "Opening hours",
+        "value": "Unknown · not imported"
+      },
+      {
+        "label": "Data mode",
+        "value": "Demonstration only"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "OpenStreetMap",
+        "recordId": "OpenStreetMap:node/demo-coffee",
+        "note": "Fictional fixture, not an imported source record."
+      },
+      {
+        "provider": "AllThePlaces",
+        "recordId": "AllThePlaces:demo-coffee",
+        "note": "Fictional fixture, not an imported source record."
+      }
+    ]
+  },
+  {
+    "id": "place-pharmacy",
+    "layer": "places",
+    "title": "Urban Apotheke",
+    "subtitle": "Pharmacy · demonstration place",
+    "category": "Pharmacy",
+    "position": [
+      13.4125,
+      52.502
+    ],
+    "ageMinutes": 90,
+    "description": "Fictional place for interface testing, not a business listing. Duplicate fixtures are linked through an explicit demo mapping; production matching is not implemented yet.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Pharmacy"
+      },
+      {
+        "label": "Opening hours",
+        "value": "Unknown · not imported"
+      },
+      {
+        "label": "Data mode",
+        "value": "Demonstration only"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "AllThePlaces",
+        "recordId": "AllThePlaces:demo-pharmacy",
+        "note": "Fictional fixture, not an imported source record."
+      }
+    ]
+  },
+  {
+    "id": "place-books",
+    "layer": "places",
+    "title": "Canal Books",
+    "subtitle": "Bookshop · demonstration place",
+    "category": "Bookshop",
+    "position": [
+      13.409,
+      52.4976
+    ],
+    "ageMinutes": 90,
+    "description": "Fictional place for interface testing, not a business listing. Duplicate fixtures are linked through an explicit demo mapping; production matching is not implemented yet.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Bookshop"
+      },
+      {
+        "label": "Opening hours",
+        "value": "Unknown · not imported"
+      },
+      {
+        "label": "Data mode",
+        "value": "Demonstration only"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "OpenStreetMap",
+        "recordId": "OpenStreetMap:node/demo-books",
+        "note": "Fictional fixture, not an imported source record."
+      }
+    ]
+  },
+  {
+    "id": "place-bakery",
+    "layer": "places",
+    "title": "Morning Bakery",
+    "subtitle": "Bakery · demonstration place",
+    "category": "Bakery",
+    "position": [
+      13.427,
+      52.5008
+    ],
+    "ageMinutes": 90,
+    "description": "Fictional place for interface testing, not a business listing. Duplicate fixtures are linked through an explicit demo mapping; production matching is not implemented yet.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Bakery"
+      },
+      {
+        "label": "Opening hours",
+        "value": "Unknown · not imported"
+      },
+      {
+        "label": "Data mode",
+        "value": "Demonstration only"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "OpenStreetMap",
+        "recordId": "OpenStreetMap:node/demo-bakery",
+        "note": "Fictional fixture, not an imported source record."
+      }
+    ]
+  },
+  {
+    "id": "place-water-fountain",
+    "layer": "places",
+    "title": "Drinking fountain",
+    "subtitle": "Public amenity · demonstration place",
+    "category": "Public amenity",
+    "position": [
+      13.415,
+      52.4919
+    ],
+    "ageMinutes": 90,
+    "description": "Fictional place for interface testing, not a business listing. Duplicate fixtures are linked through an explicit demo mapping; production matching is not implemented yet.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Public amenity"
+      },
+      {
+        "label": "Opening hours",
+        "value": "Unknown · not imported"
+      },
+      {
+        "label": "Data mode",
+        "value": "Demonstration only"
+      }
+    ],
+    "sources": [
+      {
+        "provider": "OpenStreetMap",
+        "recordId": "OpenStreetMap:node/demo-fountain",
+        "note": "Fictional fixture, not an imported source record."
+      }
+    ]
+  }
+]
