@@ -1,0 +1,271 @@
+/* bare minimum. only what the layout needs to function.
+   everything else is browser default. */
+
+* {
+  box-sizing: border-box;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+p, h1, h2 {
+  margin: 0 0 8px;
+}
+
+/* header: plain text line, status tag shoved right */
+
+.preview-header {
+  margin-bottom: 12px;
+}
+
+.wordmark {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.demo-tag {
+  float: right;
+  border: 1px solid #999;
+  padding: 1px 4px;
+  font-size: 0.8em;
+  background: #eee;
+}
+
+.preview-settings {
+  margin: 8px 0;
+}
+
+.setting-group {
+  display: inline;
+  margin-right: 16px;
+}
+
+/* device preview: must keep fixed pixel sizes + pixelated rendering */
+
+.device-stage {
+  border: 1px solid #999;
+  padding: 8px;
+  margin: 8px 0;
+  overflow-x: auto;
+  background: #eee;
+}
+
+.device-surround {
+  box-sizing: content-box;
+  padding: 6px;
+  width: var(--screen-width);
+  margin: 0 auto;
+  border: 1px solid #666;
+  background: #ccc;
+}
+
+.device-screen {
+  display: block;
+  position: relative;
+  width: var(--screen-width);
+  height: var(--screen-height);
+  background: #000;
+  touch-action: none;
+  user-select: none;
+  cursor: crosshair;
+}
+
+.device-screen img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+
+.camera-image-link, .camera-source-link {
+  position: absolute;
+  display: block;
+  cursor: pointer;
+}
+
+.camera-source-link {
+  left: 0;
+  width: 100%;
+}
+
+.camera-provider-link {
+  position: absolute;
+  left: 5%;
+  padding: 2px 6px;
+  border: 1px solid #666;
+  background: #fff;
+  color: #000;
+  font-size: 12px;
+}
+
+.boot-screen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #eee;
+  font-family: monospace;
+}
+
+.boot-screen span, .boot-screen small {
+  color: #999;
+  font-size: 11px;
+}
+
+.device-caption {
+  margin-top: 6px;
+  font-size: 0.8em;
+  color: #555;
+}
+
+.device-caption span {
+  margin-right: 16px;
+}
+
+/* controls: default browser buttons in a row */
+
+.keyboard-controls button {
+  margin: 2px;
+  text-transform: capitalize;
+}
+
+kbd {
+  border: 1px solid #999;
+  padding: 0 3px;
+  font-size: 0.8em;
+}
+
+.location-controls {
+  margin: 8px 0;
+}
+
+.location-controls label {
+  display: inline-block;
+  margin: 0 8px 8px 0;
+  font-size: 0.85em;
+}
+
+.location-controls label input {
+  display: block;
+  width: 135px;
+}
+
+.location-controls small {
+  display: block;
+  color: #555;
+  font-size: 0.85em;
+  margin-top: 4px;
+}
+
+/* stats: plain row of numbers */
+
+.density-strip {
+  margin: 12px 0;
+}
+
+.density-strip > div {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  padding-right: 12px;
+}
+
+.density-strip strong {
+  font-size: 1.4em;
+  font-weight: normal;
+}
+
+.density-strip span {
+  display: block;
+  font-size: 0.8em;
+  color: #555;
+}
+
+/* sources */
+
+.sources h2 {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 16px;
+}
+
+.sources li {
+  overflow-wrap: anywhere;
+  margin-bottom: 6px;
+  font-size: 0.9em;
+}
+
+.hardware-note {
+  border-left: 2px solid #999;
+  padding-left: 8px;
+  color: #555;
+  font-size: 0.85em;
+}
+
+/* footer */
+
+.preview-footer {
+  margin-top: 20px;
+  font-size: 0.85em;
+}
+
+.preview-footer a {
+  margin-right: 12px;
+}
+
+.preview-footer > span {
+  color: #555;
+}
+
+/* errors */
+
+.connection-error {
+  border: 2px solid #c00;
+  background: #fdd;
+  padding: 8px;
+  margin: 12px 0;
+  max-width: 640px;
+}
+
+.connection-error code {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+/* frame-only mode (shared with CYD display) */
+
+.simulator.device-only {
+  margin: 0;
+  padding: 0;
+}
+
+.device-only .device-stage {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  overflow: visible;
+}
+
+.device-only .device-surround {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.device-only .connection-error {
+  margin: 0;
+  max-width: 320px;
+}
+
+@media (max-width: 600px) {
+  .density-strip > div {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}
