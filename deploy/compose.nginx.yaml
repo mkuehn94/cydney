@@ -1,0 +1,15 @@
+# for when nginx is already running on the host, use instead of compose.yaml
+name: cydney
+
+services:
+  app:
+    extends:
+      file: compose.app.yaml
+      service: app
+    environment:
+      CYD_ROOT_PATH: /cydney
+    ports:
+      - "127.0.0.1:8096:8000"
+
+volumes:
+  cache:

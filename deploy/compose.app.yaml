@@ -1,0 +1,28 @@
+# app service, used by both compose files
+services:
+  app:
+    build:
+      context: ..
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      CYD_MODE: live
+      CYD_FEED_CACHE: /app/.cache/feeds
+      CYD_ATP_FILE: /app/.cache/imports/alltheplaces.geojson
+    volumes:
+      - cache:/app/.cache
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+    mem_limit: 1536m
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: "3"
+
+volumes:
+  cache:

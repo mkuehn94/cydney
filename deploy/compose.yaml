@@ -1,0 +1,36 @@
+name: cydney
+
+services:
+  app:
+    extends:
+      file: compose.app.yaml
+      service: app
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    depends_on:
+      app:
+        condition: service_healthy
+    environment:
+      CYD_DOMAIN: ${CYD_DOMAIN:?Set CYD_DOMAIN in deploy/.env}
+      CYD_EMAIL: ${CYD_EMAIL:?Set CYD_EMAIL in deploy/.env}
+      CYD_AUTH_USER: ${CYD_AUTH_USER:-cydney}
+      CYD_AUTH_HASH: ${CYD_AUTH_HASH:?Set CYD_AUTH_HASH in deploy/.env}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: "3"
+
+volumes:
+  cache:
+  caddy_data:
+  caddy_config:

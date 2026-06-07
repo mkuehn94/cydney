@@ -1,0 +1,12 @@
+{
+	email {$CYD_EMAIL}
+	# firmware only knows ISRG Root X1 + X2 (lets encrypt)
+	acme_ca https://acme-v02.api.letsencrypt.org/directory
+}
+
+{$CYD_DOMAIN} {
+	basic_auth {
+		{$CYD_AUTH_USER} {$CYD_AUTH_HASH}
+	}
+	reverse_proxy app:8000
+}
