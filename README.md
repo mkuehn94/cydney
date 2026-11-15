@@ -8,6 +8,17 @@ To make this SOMEWHAT clean we aggregate the same type of objects as clusters an
 
 Because the tiny ESP32 would struggle fetching that much data in real time, we combine it with a python backend that does most of the work, specifically data fetching and rendering to either **320 × 240** or **240 × 320**  (depending on your CYD). We use React to render it and then push it onto the CYD.
 
+<p>
+  <img src="docs/images/IMG_3383.jpg" width="250">
+  <img src="docs/images/IMG_3389.jpg" width="250">
+  <img src="docs/images/IMG_3390.jpg" width="250">
+  <img src="docs/images/IMG_3391.jpg" width="250"><br>
+  <img src="docs/images/IMG_3399.jpg" width="250">
+  <img src="docs/images/IMG_3400.jpg" width="250">
+  <img src="docs/images/IMG_3401.jpg" width="250">
+  <img src="docs/images/IMG_3421.jpg" width="250">
+</p>
+
 ## Run it
 
 Should require **Python 3.12+**, [uv](https://docs.astral.sh/uv/) package manager, **Node.js 22.12+** and npm.
